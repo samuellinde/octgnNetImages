@@ -105,7 +105,7 @@ func getPaths(gInfo Game) (setPath string, imgPath string) {
 		log.Fatal(err)
 	}
 
-	installPath := path.Join(curUser.HomeDir, "Documents", "OCTGN")
+	installPath := path.Join(curUser.HomeDir, ".wine-octgn", "drive_c", "users", curUser.Username, "My Documents", "OCTGN")
 	if *forceCWD {
 		installPath, _ = os.Getwd()
 	}
